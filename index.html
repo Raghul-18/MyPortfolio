@@ -8,8 +8,53 @@
 
         <!-- =====BOX ICONS===== -->
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Raghul Prasanth</title>
+    <style>
+        .checkbox {
+	        opacity: 0;
+	        position: absolute;
+            }
 
-        <title>Portfolio website complete</title>
+        .label {
+	        background-color: #0E2431;
+	        border-radius: 50px;
+	        cursor: pointer;
+	        display: flex;
+	        align-items: center;
+	        justify-content: space-between;
+	        padding: 5px;
+	        position: relative;
+	        height: 26px;
+	        width: 50px;
+	        transform: scale(1.5);
+        }
+
+        .label .ball {
+	        background-color: #fff;
+	        border-radius: 50%;
+	        position: absolute;
+	        top: 2px;
+	        left: 2px;
+	        height: 22px;
+	        width: 22px;
+	        transform: translateX(0px);
+	        transition: transform 0.2s linear;
+        }
+
+        .checkbox:checked + .label .ball {
+	        transform: translateX(24px);
+        }
+
+
+        .fa-moon {
+	        color: #f1c40f;
+        }
+
+        .fa-sun {
+	        color: #f39c12;
+        }
+    </style>
     </head>
     <body>
         <!--===== HEADER =====-->
@@ -18,6 +63,15 @@
                 <div>
                     <a href="#" class="nav__logo">Raghul Prasanth</a>
                 </div>
+                <!-- 
+                <div>
+                    <input type="checkbox" class="checkbox" id="chk" />
+                    <label class="label" for="chk">
+                        <i class="bx-bxl-moon"></i>
+                        <i class="fas fa-sun"></i>
+                        <div class="ball"></div>
+                    </label>
+                </div>-->
 
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
@@ -45,16 +99,16 @@
                 </div>
 
                 <div class="home__social">
-                    <a href="" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
-                    <a href="" class="home__social-icon"><i class='bx bxl-twitter' ></i></a>
-                    <a href="" class="home__social-icon"><i class='bx bxl-github' ></i></a>
-                    <a href="" class="home__social-icon"><i class='bx bxl-instagram'></i></a>
-                    <a href="" class="home__social-icon"><i class='bx bxl-facebook' ></i></a>
-                    <a href="" class="home__social-icon"><i class='bx bxl-github' ></i></a>
+                    <a href="www.linkedin.com/in/raghul-prasanth" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://twitter.com/raghul_18" class="home__social-icon"><i class='bx bxl-twitter' ></i></a>
+                    <a href="https://www.instagram.com/raghul_prasanth_18" class="home__social-icon"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://www.facebook.com/raghulprasanthsp18" class="home__social-icon"><i class='bx bxl-facebook' ></i></a>
+                    <a href="https://github.com/Raghul-18" class="home__social-icon"><i class='bx bxl-github' ></i></a>
+                    <a href="raghul01020405@gmail.com" class="home__social-icon"><i class='fa fa-envelope' ></i></a>
                 </div>
 
                 <div class="home__img">    
-                    <img src="assets/img/Custom Size – 1.png" alt="">
+                    <img src="assets/img/mp.png" alt="">
                 </div>
             </section>
 
@@ -183,9 +237,9 @@
         <footer class="footer">
             <p class="footer__title">Raghul Prasanth</p>
             <div class="footer__social">
-                <a href="#" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
-                <a href="#" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
-                <a href="#" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
+                <a href="https://www.facebook.com/raghulprasanthsp18" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
+                <a href="https://www.instagram.com/raghul_prasanth_18" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
+                <a href="https://twitter.com/raghul_18" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
             </div>
             <p>&#169; 2021 copyright all right reserved to Raghul Prasanth</p>
         </footer>
@@ -196,5 +250,13 @@
 
         <!--===== MAIN JS =====-->
         <script src="assets/js/main.js"></script>
+        <!--==== THEME TOGGLE ====-->
+        <script>
+            const chk = document.getElementById('chk');
+
+chk.addEventListener('change', () => {
+	document.body.classList.toggle('dark');
+});
+        </script>
     </body>
 </html>
